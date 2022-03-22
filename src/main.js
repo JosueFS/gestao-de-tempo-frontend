@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router/router'
 import { createProvider } from './vue-apollo'
 import vuetify from './plugins/vuetify'
+import '@/css/main.css'
 
 Vue.config.productionTip = false
 
