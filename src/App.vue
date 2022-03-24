@@ -24,8 +24,7 @@ export default {
   max-width: 1080px;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  background: transparent;
 }
 
 

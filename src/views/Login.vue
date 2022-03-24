@@ -7,16 +7,16 @@
                 class="d-flex justify-center "
               >
           <v-icon 
-            color="#21E6C1" size="40">
+            color="#BDC7C9" size="40">
             mdi-shield-account
           </v-icon>
         </v-col>
         <v-col cols="8">
           <v-text-field
-              style="color: #21E6C1 !important; border: none !important;"
+              style="color: #BDC7C9 !important; border: none !important;"
               class="text-input"
               label="username"
-              color="#21E6C1"
+              color="#BDC7C9"
           >
 
           </v-text-field>
@@ -27,14 +27,14 @@
                 class="d-flex justify-center "
               >
           <v-icon 
-            color="#21E6C1" size="40">
+            color="#BDC7C9" size="40">
             mdi-shield-key
           </v-icon>
         </v-col>
         <v-col cols="8">
           <v-text-field
               label="password"
-              color="#21E6C1"
+              color="#BDC7C9"
               type="password"
           >
 
@@ -42,11 +42,21 @@
         </v-col>
         <v-col  cols="12" align="center" class="pb-3">
           <v-btn
-              class="btn pa-0"
+              class="btn"
             >
-                <v-icon>
-
+                <v-icon class="py-3">
+                    mdi-login
                 </v-icon>
+                <span class="ml-3">
+                  Login
+                </span>
+          </v-btn>
+           <v-btn
+              class="btn mt-3"
+              @click="getHome()"
+            >
+                <img src="../assets/ClickUp-logo1.png" alt="" 
+                  style="width:100%; max-width: 100px" >
           </v-btn>
         </v-col>
       </v-row>
@@ -59,7 +69,12 @@
 
   export default {
     name: 'Login',
-
+    
+    methods:{
+      getHome(){
+        this.$router.push('/home')
+      }
+    }
   }
 </script>
 
@@ -70,12 +85,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   
 }
 .form-input{
   background-color: #191A19;
-  box-shadow: 0px 0px 12px 0px rgba(194,194,194,1);
+  box-shadow: 0px 0px 12px 0px rgb(0, 0, 0);
   border-radius:8px;
+  border: 2px solid #BDC7C9;
 }
 .icon {
   background-color: #191A19;
@@ -83,18 +100,18 @@
 }
 
 .v-text-field >>> input{
-  color: #21E6C1 !important;
+  color: #BDC7C9 !important;
   border: none !important;
 }
 
 .v-input >>> label {
-  color: #21E6C1;
+  color: #BDC7C9;
 }
 
 .btn {
   width:100%;
   max-width: 180px;
-  background-color: #55efc4;
-  background-image: linear-gradient(315deg, #55efc4 0%, #3fd18d 74%);
+  background-color: #2FA4FF !important;
+  color:#BDC7C9 !important;
 }
 </style>
